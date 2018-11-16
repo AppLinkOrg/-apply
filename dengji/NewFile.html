@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no"/>
+
+<title>Insert title here</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css" />
+		 <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+<script src="js/jquery-3.3.1.min.js"></script>
+
+	   <script src="js/bootstrap-datepicker.js"></script>
+	   <script type="text/javascript" src="js/bootstrap.js" ></script>
+	   <script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
+       
+
+
+ <style type="text/css">
+ 	html { overflow-x:hidden; }
+ 	
+ 	 body{overflow-x：hidden;overflow-y：auto;margin:0; padding:0;}
+
+ .qwe {margin-top:40px}
+ .col-sm-4{
+ 	margin-top:10px;
+ 	
+ }
+ label{
+ 	margin-top:10px;
+ 	
+ }
+ </style>
+</head>
+
+<body>
+
+
+<form class="form-horizontal" role="form">
+  <div class="form-group" >
+    <label for="firstname" class="col-sm-2 control-label" >学生姓名</label>
+    <div class="col-sm-4"   >
+      <input type="text" class="form-control" id="a" placeholder="必填项">
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">曾用名</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="b" placeholder="必填项">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">性别</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="c">
+			<option>-请选择-</option>
+			<option>男</option>
+			<option>女</option>
+			
+		</select>
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">血型</label>
+    <div class="col-sm-4">
+       <select class="form-control" id="d">
+			<option>-请选择-</option>
+			
+			<option>未定血型</option>
+			<option>A血型</option>
+			<option>B血型</option>
+			<option>AB血型</option>
+			<option>O型</option>
+			<option>RH阳性血型</option>
+			<option>RH阴性血型</option>
+			<option>HLA血型</option>
+			<option>其他血型</option>
+			<option>未知血型</option>
+		</select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">身份证类型</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="e">
+			<option>-请选择-</option>
+			<option>无</option>
+			<option>居民身份证</option>
+			<option>香港特区护照/身份证</option>
+			<option>澳门特区护照/身份证</option>
+				<option>台湾居民来往大陆通行证</option>
+			<option>境外永久居住证</option>
+		</select>
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">身份证号码</label>
+    <div class="col-sm-4">
+       <input type="text" class="form-control" id="f" placeholder="必填项">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">出生日期</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control datepicker" id="g" placeholder="必填项">
+    </div>
+    <label for="lastname" class="col-sm-1  control-label">民族</label>
+    <div class="col-sm-4">
+     <input type="text" class="form-control" id="h" placeholder="必填项">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">户口类型</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="i">
+			<option>-请选择-</option>
+			<option>非农业户口</option>
+			<option>农业户口</option>
+			
+		</select>
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">户口所在地</label>
+    <div class="col-sm-4">
+     <input type="text" class="form-control" id="j" placeholder="必填项">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">户口所在地派出所</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="k" placeholder="必填项">
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">籍贯地</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="l" placeholder="必填项">
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">出生地</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="m" placeholder="必填项">
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">独生子女</label>
+    <div class="col-sm-4">
+       <select class="form-control" id="n">
+			<option>-请选择-</option>
+			<option>是</option>
+			<option>否</option>
+			
+		</select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">是否孤儿</label>
+    <div class="col-sm-4">
+     <select class="form-control" id="o">
+			<option>-请选择-</option>
+			<option>是</option>
+			<option>否</option>
+			
+		</select>
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">是否烈士或优抚子女</label>
+    <div class="col-sm-4">
+     <select class="form-control" id="p">
+			<option>-请选择-</option>
+			<option>是</option>
+			<option>否</option>
+			
+		</select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">港澳台侨</label>
+    <div class="col-sm-4">
+    <select class="form-control" id="q">
+			<option>-请选择-</option>
+			<option>否</option>
+			<option>香港同胞</option>
+			<option>香港同胞亲属</option>
+			<option>澳门同胞</option>
+			<option>澳门同胞亲属</option>
+			<option>台湾同胞</option>
+			<option>台湾同胞亲属</option>
+			<option>华侨</option>
+			<option>侨眷</option>
+			<option>归侨</option>
+			<option>归侨子女</option>
+			<option>归国留学人员</option>
+			<option>非华裔中国人</option>
+			<option>外籍华裔人</option>
+			<option>外国人</option>
+			<option>其他</option>
+		</select>
+    </div>
+    <label for="lastname" class="col-sm-1 control-label">健康状况</label>
+    <div class="col-sm-4">
+       <select class="form-control" id="r">
+			<option>-请选择-</option>
+			<option>健康</option>
+			<option>一般货较弱</option>
+			<option>有慢性病</option>
+			<option>残疾</option>
+		</select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">特长</label>
+    <div class="col-sm-4">
+     <input type="text" class="form-control" id="ss" >
+    </div>
+    <label for="lastname" class="col-sm-1 control-label"></label>
+    <div class="col-sm-4">
+     
+    </div>
+  </div>
+  
+   <div class="form-group qwe">
+    <div class="col-sm-5">
+      
+    </div>
+  
+   
+  </div>
+</form>
+
+
+</body>
+<script>
+	
+	
+
+
+	
+	
+	 $(".datepicker").datepicker({ format: "yyyy-mm-dd", language: "zh-CN", autoclose: true, todayhightline: true });
+		
+		window.onload=function(){
+			
+			let url = top.window.location.href;
+        id = url.slice(url.indexOf('?') + 4);
+        if(id>0){ 
+        	top.diyi();
+        
+        }else {
+        	top.diyi1();
+        	
+        }
+   
+};
+		
+		
+		
+	</script>
+</html>

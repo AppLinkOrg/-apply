@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no"/>
+		<title></title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css" />
+		 <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		 <style type="text/css">
+ td{
+ 	width: 100px;;
+ 	
+ }
+ </style>
+	</head>
+	<body >
+		
+		<div id="top" style="margin: auto; height:200px; text-align: center; font-size: 40px; margin-top: 120px; line-height: 200px;"><label>报&nbsp名&nbsp查&nbsp询</label></div>
+		
+		<div style="width: 320px; margin: auto; margin-top:0px;text-align: center "  >
+			<div align="right"  style="margin-top:0px; margin-right: 60px;">
+				<label for="firstname" class="control-label">姓名:&nbsp</label>
+				<input type="text"  id="name" style="width: 200px;" >
+			</div>
+			<div align="right"  style="margin-top:20px; margin-right: 60px;">
+				<label for="firstname" class=" control-label">身份证:&nbsp</label>
+				<input type="text"  id="sfz" style="width: 200px;" >
+				
+			</div>
+			<div  style="margin: auto; width:300px; height: 200px; margin-top: 30px;" align="center" >
+				<button type="button" class="btn1 btn btn-primary  " style="margin-right: 30px ;" >返回主页</button>
+				<button type="button" class="btn2  btn btn-primary  "  style="margin-left: ;">报名查询</button></div>
+			
+		</div>
+		<table id="tb" width="700px" style="margin: auto; display: none ;text-align: center;"  border="1" cellspacing="0" >
+			<tr><td>学生姓名</td><td>身份证件号</td><td>父亲姓名</td><td>母亲姓名</td><td>监护人姓名</td><td>本地联系人姓名</td><td>详情</td></tr>
+			<tr><td id="name" class="name"></td><td class="name"></td><td class="name"></td><td class="name"></td><td class="name"></td><td class="name"></td><td class="name">
+				<a href="" id="xq">详情</a></td></tr>
+			
+			
+		</table>
+		
+	</body>
+	<script>
+		
+		$(function(){
+			
+			$.ajax({
+					
+					type:"post",
+					 dataType:"json",
+					url:"http://cmsdev.app-link.org/alucard263096/crmbm/api/xuexiao/gongao",
+					
+					 success: function (data) { 
+					 	
+					 	$("body").attr("background","http://cmsdev.app-link.org/Users/alucard263096/crmbm/upload/xuexiaogongao/"+data[0].picture);
+					  
+					
+                        
+        }
+				});
+			
+			
+		})
+		
+		$(".btn1").click(function(){
+			
+			$(location).attr('href', 'home.html');
+			
+		})
+		
+		
+		$(".btn2").click(function(){
+			
+			 var name=$("#name").val();
+			 var sfz=$("#sfz").val();
+			
+			 if(name!=""&&sfz!=""){
+			 	
+			 	$.ajax({
+					
+					type:"post",
+					 dataType:"json",
+					url:"http://cmsdev.app-link.org/alucard263096/crmbm/api/xueshen/xslbcx",
+					data:{xingming:name,shenfenzhengjianhao:sfz},
+					 success: function (data) { 
+					 	console.log(data);
+					 	if(data.length!=1)
+					 	{
+					 		alert("暂无此学生");
+					 		
+					 	}
+					 	else if(data.length==1){
+					 		
+					 		$("#tb").css('display','block');
+					 		
+					 	$(".name").eq(0).html(data[0].xingming);
+					 	$(".name").eq(1).html(data[0].shenfenzhengjianhao);
+					 	$(".name").eq(2).html(data[0].fuqinxingmign);
+					 	$(".name").eq(3).html(data[0].muqinxingming);
+					 	$(".name").eq(4).html(data[0].jianhurenxingming);
+					 	$(".name").eq(5).html(data[0].bendilianxirenxingming);
+					 	$("#xq").attr('href',"index.html?id="+data[0].id);
+					 	}
+     
+        }
+				});
+				
+			 	
+			 	
+			 }else{
+			 	alert("请输入完整的信息");
+			 	
+			 }
+			
+			
+			 
+			
+		})
+		
+		
+		
+		
+		
+	</script>
+</html>

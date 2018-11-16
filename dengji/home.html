@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0, user-scalable=no"/>
+		<title></title>
+		 <link rel="stylesheet" href="css/bootstrap.min.css" />
+		 <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		 <style>
+	/*适配iphone5*/
+  body{
+  	
+  }
+.btn2{
+	margin-left: 50px;
+	
+}
+	.btn1{
+	margin-right: 50px;
+	
+}	 	
+@media screen and (min-width: 300px) and (max-width:600px) {
+    body {
+         height: 800px;
+         
+    }
+}
+		 </style>
+	</head>
+	<body  role="form" >
+		<div id="top" style="margin: auto; height:80px; text-align: center; font-size: 40px; margin-top: 30px;"><label>宁国市西津小学新生报名登记系统</label>
+			
+		</div>
+		 
+		 <div class="nnr"  style="   margin: auto; padding-top:50px; font-size: 18px;" >
+		 	
+		 	     <div id="nr"  style="display: none;"></div>
+		 	      <div id="nr1" ></div>
+		 	    
+		 </div>
+		
+		<div  style=" margin: auto; margin-right: -50px; " align="center" ><button  type="button" class="btn1 btn btn-primary " >报名填表</button>
+			 <button type="button" class="btn2  btn btn-primary  " >报名查询</button>
+		</div>
+		
+	</body>
+	<script>
+	
+		$(".btn1").click(function(){
+			
+			window.location.href="index.html";
+			
+		})
+		
+		$(".btn2").click(function(){
+			
+			window.location.href="chaxun.html";
+			
+		})
+		
+		
+		$(function(){
+			$.ajax({
+					
+					type:"post",
+					 dataType:"json",
+					url:"http://cmsdev.app-link.org/alucard263096/crmbm/api/xuexiao/ggnr?id=3",
+					
+					 success: function (data) { 
+					 	
+					 	$("#nr").html(data.gg);
+					 	$("#nr").css("display","none");
+					 var nr= $("#nr").text();
+					
+					 $("#nr1").append(nr);
+					 	console.log(data.gg);
+					 $("body").attr("background","http://cmsdev.app-link.org/Users/alucard263096/crmbm/upload/xuexiaogongao/"+data.picture);
+					 
+                        
+        }
+				});
+				
+			
+			
+		})
+		
+	</script>
+</html>
