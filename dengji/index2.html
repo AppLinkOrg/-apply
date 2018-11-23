@@ -135,7 +135,7 @@
     
     
     <div class="col-sm-4">
-      <input    class="form-control uniform_on" name="file_fangchanzhengzhaopian" onchange="upload('fangchanzhengzhaopian', 'xuesheng')" id="file_fangchanzhengzhaopian"  type="file" />
+      <input    class="form-control uniform_on" name="file_fangchanzhengzhaopian" onchange="upload('fangchanzhengzhaopian', 'photo')" id="file_fangchanzhengzhaopian"  type="file" />
         <img id="view_fangchanzhengzhaopian" style="display:none;height:100px;"  />
         <input class="uniform_on" type="hidden" id="content_fangchanzhengzhaopian" value="" />
         <span class='help-block'></span>
@@ -151,7 +151,7 @@
  <div class="form-group " data-toggle="tooltip"  id="block_hukoubenhuzhuye">
  <label class="col-sm-2 control-label" >户口本户主页</label>
 <div class="col-sm-4">
-<input    class="form-control uniform_on" name="file_hukoubenhuzhuye" onchange="upload('hukoubenhuzhuye', 'xuesheng')" id="file_hukoubenhuzhuye"  type="file" />
+<input    class="form-control uniform_on" name="file_hukoubenhuzhuye" onchange="upload('hukoubenhuzhuye', 'photo')" id="file_hukoubenhuzhuye"  type="file" />
  <img id="view_hukoubenhuzhuye" style="display:none;height:100px;"  />
  <input class="uniform_on" type="hidden" id="content_hukoubenhuzhuye" value="" />
  <span class='help-block'></span>
@@ -165,8 +165,8 @@
  <div class="form-group " data-toggle="tooltip"  id="block_hukoubenxueshengye">
 <label class="col-sm-2 control-label" >户口本学生页</label>
    <div class="col-sm-4">
-    <input    class="form-control uniform_on" name="file_hukoubenxueshengye" onchange="upload('hukoubenxueshengye', 'xuesheng')" id="file_hukoubenxueshengye"  type="file" />
-     <img id="view_hukoubenhuzhuye" style="display:none;height:100px;"  />
+    <input    class="form-control uniform_on" name="file_hukoubenxueshengye" onchange="upload('hukoubenxueshengye', 'photo')" id="file_hukoubenxueshengye"  type="file" />
+     <img id="view_hukoubenxueshengye" style="display:none;height:100px;"  />
      <input class="uniform_on" type="hidden" id="content_hukoubenxueshengye" value="" />
      <span class='help-block'></span>
                                             </div>
@@ -224,7 +224,7 @@
         $.ajaxFileUpload
 		(  
 			{           
-			    "url":'http://cmsdev.app-link.org/alucard263096/crmbm/fileupload?module='+module+"&field=file_"+key,
+			    "url":'upload.php?module='+module+"&field=file_"+key,
 			    "secureuri":false ,
 			   
 			    "fileElementId": "file_" + key,
@@ -233,7 +233,7 @@
 			  
 			    
 			    "success": function (data, status) {
-			    	
+			    	//alert(data);
 			        if (data.substring(0, 7) == "success") {
 			            str = data.substring(7, data.length);
 			            $("#content_" + key).val(str.split('|~~|')[1]);
