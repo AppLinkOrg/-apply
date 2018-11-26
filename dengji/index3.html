@@ -1,145 +1,164 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no"/>
+
+	<head>
+		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no" />
 		<title></title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
+		<style type="text/css">
+			html {
+				overflow-x: hidden;
+			}
+			
+			body {
+				overflow-x：hidden；overflow-y：auto；
+			}
+			
+			.qwe {
+				margin-top: 40px
+			}
+			
+			.col-sm-4 {
+				margin-top: 10px;
+			}
+			
+			label {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">房产证号</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c1" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">不动产单元号</label>
+				<div class="col-sm-4">
+					<input type="text" maxlength="28" class="form-control" id="c2"  onchange="cc()" datatype="s0-6" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">房产主</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c3" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">房产详细地址</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c4" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">房产主与学生关系</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c5" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">户口簿证号</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c6" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">户主姓名</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c7" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">户主与学生关系</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="c8" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">出生证</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="c9">
+						<option>-请选择-</option>
+						<option>有</option>
+						<option>无</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">接种查验合格证</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="c10">
+						<option>-请选择-</option>
+						<option>有</option>
+						<option>无</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">其他1</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="c11" placeholder="必填项">
+				</div>
+
+			</div>
+			<div class="form-group">
+				<label for="lastname" class="col-sm-2 control-label">其他2</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="c12" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">其他3</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="c13" placeholder="必填项">
+				</div>
+
+			</div>
+
+			<div class="form-group qwe">
+				<div class="col-sm-5">
+
+				</div>
+
+			</div>
+		</form>
+
+	</body>
+	<script>
+		
+	function cc(){
+			
+			var cc=$("#c2").val();
+			var z=cc.toString().split("");
+		
+		  	for(var i=0;i<z.length;i++){
+        if(i===5||i==11||i==18||i==27){
+            z[i]=z[i]+" ";
+             }
+                }
+			$("#c2").val(z.join(""));
+			
+		}
+		
 	
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-		 <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
-<script src="js/jquery-3.3.1.min.js"></script>
 
-	   <script src="js/bootstrap-datepicker.js"></script>
-	   <script type="text/javascript" src="js/bootstrap.js" ></script>
-	   <script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
-	<style type="text/css">
-			 
-		html { overflow-x:hidden; }
- 	 body{overflow-x：hidden；overflow-y：auto；}
-
- .qwe {margin-top:40px}
- .col-sm-4{
- 	margin-top:10px;
- 	
- }
- label{
- 	margin-top:10px;
- 	
- }
- </style>
-</head>
-
-<body >
-
-
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">房产证号</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="c1" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">不动产单元号</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="c2" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">房产主</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="c3" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">房产详细地址</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="c4" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">房产主与学生关系</label>
-    <div class="col-sm-4">
-    <input type="text" class="form-control" id="c5" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">户口簿证号</label>
-    <div class="col-sm-4">
-       <input type="text" class="form-control" id="c6" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">户主姓名</label>
-    <div class="col-sm-4">
-     <input type="text" class="form-control" id="c7" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">户主与学生关系</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="c8" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">出生证</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="c9">
-			<option>-请选择-</option>
-			<option>有</option>
-			<option>无</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">接种查验合格证</label>
-    <div class="col-sm-4">
-     <select class="form-control" id="c10">
-			<option>-请选择-</option>
-			<option>有</option>
-			<option>无</option>
-			
-		</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">其他1</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" id="c11" placeholder="必填项">
-    </div>
-    
-  </div>
-  <div class="form-group">
-   <label for="lastname" class="col-sm-2 control-label">其他2</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" id="c12" placeholder="必填项">
-    </div>
-  </div>
-   <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">其他3</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" id="c13" placeholder="必填项">
-    </div>
-    
-  </div>
-   
-  
-   <div class="form-group qwe">
-    <div class="col-sm-5">
-      
-    </div>
-  
-   
-  </div>
-</form>
-
-
-</body>
-<script>
-	 
 		
-		window.onload=function(){
+		window.onload = function() {
 			let url = top.window.location.href;
-        id = url.slice(url.indexOf('?') + 4);
-        if(id>0){ 
-        	top.disi();
-        
-        }else{
-        	top.disi1();
-        	
-        }
-   
-};
-		
+			id = url.slice(url.indexOf('?') + 4);
+			if(id > 0) {
+				top.disi();
+
+			} else {
+				top.disi1();
+
+			}
+
+		};
 	</script>
+
 </html>

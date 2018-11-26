@@ -1,287 +1,281 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
-		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no"/>
+		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no" />
 		<title></title>
 	</head>
-	
+
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-		 <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
-		 <link rel="stylesheet" media="screen" href="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/vendors/uniform/themes/default/css/uniform.default.min.css">
-        <link rel="stylesheet" media="screen" href="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/css/uniform.default.fixes.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" media="screen" href="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/vendors/uniform/themes/default/css/uniform.default.min.css">
+	<link rel="stylesheet" media="screen" href="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/css/uniform.default.fixes.css">
 
-<script type="text/javascript" src="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/js/jquery-2.0.3.min.js"></script>
 
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
 
-
-	   <script src="js/bootstrap-datepicker.js"></script>
-	   <script type="text/javascript" src="js/bootstrap.js" ></script>
-	   <script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
-	
-	 <script type="text/javascript" src="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/vendors/uniform/jquery.uniform.min.js"></script>
-	   <script src="js/ajaxfileupload.js"></script>
-
-
+	<script type="text/javascript" src="https://cmsdev.oss-cn-hangzhou.aliyuncs.com/vendors/uniform/jquery.uniform.min.js"></script>
+	<script src="js/ajaxfileupload.js"></script>
 
 	<style type="text/css">
-		html { overflow-x:hidden; }
- 	 body{overflow-x：hidden；overflow-y：auto；}
+		html {
+			overflow-x: hidden;
+		}
+		
+		body {
+			overflow-x：hidden；overflow-y：auto；
+		}
+		
+		.qwe {
+			margin-top: 40px
+		}
+		
+		.col-sm-4 {
+			margin-top: 10px;
+		}
+		
+		label {
+			margin-top: 10px;
+		}
+	</style>
 
- .qwe {margin-top:40px}
- .col-sm-4{
- 	margin-top:10px;
- 	
- }
- label{
- 	margin-top:10px;
- 	
- }
- </style>
-	<body >
+	<body>
 		<form class="form-horizontal" role="form">
-		<div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">外地学生</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b1">
-			<option>-请选择-</option>
-			<option>是</option>
-			<option>否</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">留守儿童</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b2">
-			<option>-请选择-</option>
-			<option>否</option>
-			<option>父母双方外出务工</option>
-			<option>父母一方外出务工另一方无监护能力</option>
-			
-		</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">留守儿童户口</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b3">
-			<option>-请选择-</option>
-			<option>农村</option>
-			<option>非农村</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">随迁子女</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b4">
-			<option>-请选择-</option>
-			<option>否</option>
-			<option>进城务工</option>
-			<option>非进城务工</option>
-			
-		</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">随迁子女情况</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b5">
-			<option>-请选择-</option>
-			<option>省内流动</option>
-			<option>县内流动</option>
-			<option>本省外县迁入</option>
-			<option>外省迁入</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">是否受过学前教育</label>
-    <div class="col-sm-4" >
-      <select class="form-control" id="b6">
-			<option>-请选择-</option>
-			<option>是</option>
-			<option>否</option>
-			
-		</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">是否享受一补</label>
-    <div class="col-sm-4">
-     <select class="form-control" id="b7">
-			<option>-请选择-</option>
-			<option>是</option>
-			<option>否</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">上下学距离</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="b8" placeholder="请输入姓">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">上下学交通方式</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="b9">
-			<option>-请选择-</option>
-			<option>校车</option>
-			<option>步行</option>
-			<option>家长自行接送</option>
-			<option>自行车(含摩托车、电动自行车)</option>
-			<option>公共交通(含城市公交、农村客运</option>
-			<option>其他</option>
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label" >房产证照片</label>
-    
-    
-    <div class="col-sm-4">
-      <input    class="form-control uniform_on" name="file_fangchanzhengzhaopian" onchange="upload('fangchanzhengzhaopian', 'photo')" id="file_fangchanzhengzhaopian"  type="file" />
-        <img id="view_fangchanzhengzhaopian" style="display:none;height:100px;"  />
-        <input class="uniform_on" type="hidden" id="content_fangchanzhengzhaopian" value="" />
-        <span class='help-block'></span>
-                                            </div>
-											<div class="col-md-4"></div>
-											<div class="col-md-8">
-											
-											<a href="javascript:void();"; class="hide deleteupload" name="fangchanzhengzhaopian"  id="uploaddelete_fangchanzhengzhaopian"  >删除</a>
-											</div>
-    </div>
-  </div>
-                                          
- <div class="form-group " data-toggle="tooltip"  id="block_hukoubenhuzhuye">
- <label class="col-sm-2 control-label" >户口本户主页</label>
-<div class="col-sm-4">
-<input    class="form-control uniform_on" name="file_hukoubenhuzhuye" onchange="upload('hukoubenhuzhuye', 'photo')" id="file_hukoubenhuzhuye"  type="file" />
- <img id="view_hukoubenhuzhuye" style="display:none;height:100px;"  />
- <input class="uniform_on" type="hidden" id="content_hukoubenhuzhuye" value="" />
- <span class='help-block'></span>
-                                            </div>
-											<div class="col-md-4"></div>
-											<div class="col-md-8">
-											
-											<a href="javascript:void();"; class="hide deleteupload" name="hukoubenhuzhuye"  id="uploaddelete_hukoubenhuzhuye"  >删除</a>
-											</div>
-</div>
- <div class="form-group " data-toggle="tooltip"  id="block_hukoubenxueshengye">
-<label class="col-sm-2 control-label" >户口本学生页</label>
-   <div class="col-sm-4">
-    <input    class="form-control uniform_on" name="file_hukoubenxueshengye" onchange="upload('hukoubenxueshengye', 'photo')" id="file_hukoubenxueshengye"  type="file" />
-     <img id="view_hukoubenxueshengye" style="display:none;height:100px;"  />
-     <input class="uniform_on" type="hidden" id="content_hukoubenxueshengye" value="" />
-     <span class='help-block'></span>
-                                            </div>
-											<div class="col-md-4"></div>
-											<div class="col-md-8">
-											
-											<a href="javascript:void();"; class="hide deleteupload" name="hukoubenxueshengye"  id="uploaddelete_hukoubenxueshengye"  >删除</a>
-											</div>
-          </div>     
-</div>
- </div>                                                             
-                                                                                                                        
-  
-                                                                                                                        
-                                                                                               
-                                                             
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">外地学生</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b1">
+						<option>-请选择-</option>
+						<option>是</option>
+						<option>否</option>
 
-		 
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">留守儿童</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b2">
+						<option>-请选择-</option>
+						<option>否</option>
+						<option>父母双方外出务工</option>
+						<option>父母一方外出务工另一方无监护能力</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">留守儿童户口</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b3">
+						<option>-请选择-</option>
+						<option>农村</option>
+						<option>非农村</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">随迁子女</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b4">
+						<option>-请选择-</option>
+						<option>否</option>
+						<option>进城务工</option>
+						<option>非进城务工</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">随迁子女情况</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b5">
+						<option>-请选择-</option>
+
+						<option>县内流动</option>
+						<option>本省外县迁入</option>
+						<option>外省迁入</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">是否受过学前教育</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b6">
+						<option>-请选择-</option>
+						<option>是</option>
+						<option>否</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">是否享受一补</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b7">
+						<option>-请选择-</option>
+						<option>是</option>
+						<option>否</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">上下学距离</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="b8" placeholder="请输入姓">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">上下学交通方式</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="b9">
+						<option>-请选择-</option>
+						<option>校车</option>
+						<option>步行</option>
+						<option>家长自行接送</option>
+						<option>自行车(含摩托车、电动自行车)</option>
+						<option>公共交通(含城市公交、农村客运</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">房产证照片</label>
+
+				<div class="col-sm-4">
+					<input class="form-control uniform_on" name="file_fangchanzhengzhaopian" onchange="upload('fangchanzhengzhaopian', 'photo')" id="file_fangchanzhengzhaopian" type="file" />
+					<a id="view1_fangchanzhengzhaopian" href="">
+					<img id="view_fangchanzhengzhaopian" style="display:none;height:100px;" />
+					</a>
+					<input class="uniform_on" type="hidden" id="content_fangchanzhengzhaopian" value="" />
+					<span class='help-block'></span>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-8">
+
+				</div>
+			</div>
+			</div>
+
+			<div class="form-group " data-toggle="tooltip" id="block_hukoubenhuzhuye">
+				<label class="col-sm-2 control-label">户口本户主页</label>
+				<div class="col-sm-4">
+					<input class="form-control uniform_on" name="file_hukoubenhuzhuye" onchange="upload('hukoubenhuzhuye', 'photo')" id="file_hukoubenhuzhuye" type="file" />
+					<a id="view1_hukoubenhuzhuye" href="">
+					<img id="view_hukoubenhuzhuye" src="" style="display:none;height:100px;" />
+					</a>
+					<input class="uniform_on" type="hidden" id="content_hukoubenhuzhuye" value="" />
+					<span class='help-block'></span>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-8">
+
+				</div>
+			</div>
+			<div class="form-group " data-toggle="tooltip" id="block_hukoubenxueshengye">
+				<label class="col-sm-2 control-label">户口本学生页</label>
+				<div class="col-sm-4">
+					<input class="form-control uniform_on" name="file_hukoubenxueshengye" onchange="upload('hukoubenxueshengye', 'photo')" id="file_hukoubenxueshengye" type="file" />
+					<a id="view1_hukoubenxueshengye" href="">
+					<img id="view_hukoubenxueshengye" style="display:none;height:100px;" />
+					</a>
+					<input class="uniform_on" type="hidden" id="content_hukoubenxueshengye" value="" />
+					<span class='help-block'></span>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-8">
+
+				</div>
+			</div>
+			</div>
+
 		</form>
 	</body>
 	<script>
-		
-		$(function(){
-			
-			
-			
-			
-			 $('.uniform_on').uniform();
-			 	$(".deleteupload").click(function(){
-			var key=$(this).attr("name");
-			
-			$("#file_"+key).val("");
-			$("#content_"+key).val("");
-			$("#view_"+key).hide();
-			 $(this).addClass("hide");
-		});
-			
+		$(function() {
+
+			$('.uniform_on').uniform();
+			$(".deleteupload").click(function() {
+				var key = $(this).attr("name");
+
+				$("#file_" + key).val("");
+				$("#content_" + key).val("");
+				$("#view_" + key).hide();
+				$(this).addClass("hide");
+			});
+
 		})
-		
-		
-		
-		 function urlChange(key){
-		 	
-		var val=$("#content_"+key).val();
-		$("#view_"+key).attr("src",val).attr("href",val);
-		if(val==""){
-			$("#view_"+key).hide();
-		}else{
-			$("#view_"+key).show();
-		}
-		
-	}
-		  function upload(key,module) {
-        
-        $.ajaxFileUpload
-		(  
-			{           
-			    "url":'upload.php?module='+module+"&field=file_"+key,
-			    "secureuri":false ,
-			   
-			    "fileElementId": "file_" + key,
-			    "dataType": 'text',
-			    
-			  
-			    
-			    "success": function (data, status) {
-			    	//alert(data);
-			        if (data.substring(0, 7) == "success") {
-			            str = data.substring(7, data.length);
-			            $("#content_" + key).val(str.split('|~~|')[1]);
 
-			            $("#view_" + key).attr("href", "http://cmsdev.app-link.org/alucard263096/crmbm/upload/"+module+"/" + str.split('|~~|')[1])
-                            .attr("src", "http://cmsdev.app-link.org/alucard263096/crmbm/upload/"+module+"/" + str.split('|~~|')[1])
-                            .show();
-                        
-						$("#uploaddelete_" + key).removeClass("hide");
-						if(UploadedCallback!=undefined){
-							UploadedCallback(key,module,"http://cmsdev.app-link.org/alucard263096/crmbm/upload/"+module+"/" + str.split('|~~|')[1]);
-							
-						}
-			        } else {
-			        	
-			            alert("失败");
-			        }
-			    },
-			    "error": function (data, status, e) {
-			      
-			    }
+		function urlChange(key) {
+
+			var val = $("#content_" + key).val();
+			$("#view_" + key).attr("src", val).attr("href", val);
+			if(val == "") {
+				$("#view_" + key).hide();
+			} else {
+				$("#view_" + key).show();
 			}
-		);
-    }
-		
-		function qqq(){
-			
-			alert(123);
-			
-		}
-		
-	 $(".datepicker").datepicker({ format: "yyyy-mm-dd", language: "zh-CN", autoclose: true, todayhightline: true });
-		
-		window.onload=function(){
-			let url = top.window.location.href;
-        id = url.slice(url.indexOf('?') + 4);
-       
-        if(id>0){ 
-        	
-        	top.disan();
-        
-        }else{
-        	
-        	top.disan1();
-        	
-        }
-   };
 
-		
+		}
+
+		function upload(key, module) {
+
+			$.ajaxFileUpload({
+				"url": 'upload.php?module=' + module + "&field=file_" + key,
+				"secureuri": false,
+
+				"fileElementId": "file_" + key,
+				"dataType": 'text',
+
+				"success": function(data, status) {
+					//alert(data);
+					if(data.substring(0, 7) == "success") {
+						str = data.substring(7, data.length);
+						$("#content_" + key).val(str.split('|~~|')[1]);
+                        $("#view1_" + key).attr("href", "http://cmsdev.app-link.org/alucard263096/crmbm/upload/" + module + "/" + str.split('|~~|')[1]);
+						$("#view_" + key).attr("href", "http://cmsdev.app-link.org/alucard263096/crmbm/upload/" + module + "/" + str.split('|~~|')[1])
+							.attr("src", "http://cmsdev.app-link.org/alucard263096/crmbm/upload/" + module + "/" + str.split('|~~|')[1])
+							.show();
+
+						$("#uploaddelete_" + key).removeClass("hide");
+						if(UploadedCallback != undefined) {
+							UploadedCallback(key, module, "http://cmsdev.app-link.org/alucard263096/crmbm/upload/" + module + "/" + str.split('|~~|')[1]);
+
+						}
+					} else {
+
+						alert("失败");
+					}
+				},
+				"error": function(data, status, e) {
+
+				}
+			});
+		}
+
+		function qqq() {
+
+			alert(123);
+
+		}
+
+		$(".datepicker").datepicker({
+			format: "yyyy-mm-dd",
+			language: "zh-CN",
+			autoclose: true,
+			todayhightline: true
+		});
+
+		window.onload = function() {
+			let url = top.window.location.href;
+			id = url.slice(url.indexOf('?') + 4);
+
+			if(id > 0) {
+
+				top.disan();
+
+			} else {
+
+				top.disan1();
+
+			}
+		};
 	</script>
+
 </html>

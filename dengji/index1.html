@@ -1,219 +1,232 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
-		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no"/>
+		<meta name="viewport" charset="utf-8" content="width=device-width,initial-scale=1.0,   user-scalable=no" />
 		<title></title>
 	</head>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-		 <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
-<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+	<script src="js/jquery-3.3.1.min.js"></script>
 
-	   <script src="js/bootstrap-datepicker.js"></script>
-	   <script type="text/javascript" src="js/bootstrap.js" ></script>
-	   <script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
 	<style type="text/css">
-			 
-		html { overflow-x:hidden; }
- 	 body{overflow-x：hidden；overflow-y：auto；}
+		html {
+			overflow-x: hidden;
+		}
+		
+		body {
+			overflow-x：hidden；overflow-y：auto；
+		}
+		
+		.qwe {
+			margin-top: 40px
+		}
+		
+		.col-sm-4 {
+			margin-top: 10px;
+		}
+		
+		label {
+			margin-top: 10px;
+		}
+	</style>
 
- .qwe {margin-top:40px}
- .col-sm-4{
- 	margin-top:10px;
- 	
- }
- label{
- 	margin-top:10px;
- 	
- }
- </style>
-	<body >
+	<body>
 		<form class="form-horizontal" role="form">
-		 <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label" >父亲姓名</label>
-    <div class="col-sm-4">
-       <input type="text" class="form-control" id="a1" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">母亲姓名</label>
-    <div class="col-sm-4">
-     <input type="text" class="form-control" id="a2" placeholder="必填项">
-    </div>
-  </div>
-   <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">父亲单位</label>
-    <div class="col-sm-4">
-        <input type="text" class="form-control" id="a3" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">母亲单位</label>
-    <div class="col-sm-4">
-    <input type="text" class="form-control" id="a4" placeholder="必填项">
-    </div>
-  </div>
-   <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">父亲电话</label>
-    <div class="col-sm-4">
-       <input type="text" class="form-control" id="a5" placeholder="必填项">
-    </div>
-   
-    <label for="lastname" class="col-sm-1 control-label">母亲电话</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a66" placeholder="必填项">
-    </div>
-  </div>
-   <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">母亲户口所在地</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a7" placeholder="必填项">
-    </div>
-     <label for="lastname" class="col-sm-1 control-label">父亲户口所在地</label>
-    <div class="col-sm-4">
-     <input type="text" class="form-control" id="a6" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">家庭情况</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="a9">
-			<option>-请选择-</option>
-			<option>正常</option>
-			<option>低收入户</option>
-			<option>外籍生</option>
-			<option>外籍配偶子女</option>
-			<option>教职工子女</option>
-			<option>单亲</option>
-			<option>隔代教养</option>
-			<option>家长身心障碍</option>
-			<option>家长身心障碍重度</option>
-			<option>孤儿院</option>
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">监护人姓名</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a10" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">监护人电话号码</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a11" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">本地联系人姓名</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a12" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">本地联系人与学生关系</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="a13">
-			<option>-请选择-</option>
-			<option>父亲</option>
-			<option>母亲</option>
-			<option>祖父</option>
-			<option>祖母</option>
-			<option>外祖母</option>
-			<option>外祖父</option>
-			<option>兄</option>
-			<option>弟</option>
-			<option>姐姐</option>
-			<option>妹妹</option>
-			<option>继父或养父</option>
-			<option>继母或养母</option>
-			<option>其他</option>
-			<option>伯父</option>
-			<option>伯母</option>
-			<option>叔父</option>
-			<option>舅父</option>
-			<option>舅母</option>
-			<option>姨夫</option>
-			<option>姨母</option>
-			<option>姑父</option>
-			<option>姑母</option>
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">本地联系人电话</label>
-    <div class="col-sm-4">
-<input type="text" class="form-control" id="a14" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">是否有居住证</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="a15">
-			<option>-请选择-</option>
-			<option>是</option>
-			<option>否</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">居住证件号码</label>
-    <div class="col-sm-4">
-       <input type="text" class="form-control" id="a16" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">居住证签发日期</label>
-    <div class="col-sm-4">
-     <input type="text" class="form-control datepicker" id="a17" placeholder="必填项">
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">入学时间</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control datepicker" id="a18" placeholder="必填项">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">入学方式</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="a19">
-			<option>-请选择-</option>
-			<option>就近入学</option>
-			<option>义务教育阶段其他</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">就读方式</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="a20">
-			<option>-请选择-</option>
-			<option>走读</option>
-			<option>住校</option>
-			
-		</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="firstname" class="col-sm-2 control-label">学区外</label>
-    <div class="col-sm-4">
-     <select class="form-control" id="a21">
-			<option>-请选择-</option>
-			<option>是</option>
-			<option>否</option>
-			
-		</select>
-    </div>
-    <label for="lastname" class="col-sm-1 control-label">家庭住址</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="a8" placeholder="必填项">
-    </div>
-  </div>
-  
-  </div>
-  </form>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">父亲姓名</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a1" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">母亲姓名</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a2" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">父亲单位</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a3" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">母亲单位</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a4" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">父亲电话</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a5" placeholder="必填项">
+				</div>
+
+				<label for="lastname" class="col-sm-1 control-label">母亲电话</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a66" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">母亲户口所在地</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a7" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">父亲户口所在地</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a6" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">家庭情况</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a9">
+						<option>-请选择-</option>
+						<option>正常</option>
+						<option>低收入户</option>
+						<option>外籍生</option>
+						<option>外籍配偶子女</option>
+						<option>教职工子女</option>
+						<option>单亲</option>
+						<option>隔代教养</option>
+						<option>家长身心障碍</option>
+						<option>家长身心障碍重度</option>
+						<option>孤儿院</option>
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">监护人姓名</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a10" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">监护人电话号码</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a11" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">本地联系人姓名</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a12" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">本地联系人与学生关系</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a13">
+						<option>-请选择-</option>
+						<option>父亲</option>
+						<option>母亲</option>
+						<option>祖父</option>
+						<option>祖母</option>
+						<option>外祖母</option>
+						<option>外祖父</option>
+						<option>兄</option>
+						<option>弟</option>
+						<option>姐姐</option>
+						<option>妹妹</option>
+						<option>继父或养父</option>
+						<option>继母或养母</option>
+						<option>其他</option>
+						<option>伯父</option>
+						<option>伯母</option>
+						<option>叔父</option>
+						<option>舅父</option>
+						<option>舅母</option>
+						<option>姨夫</option>
+						<option>姨母</option>
+						<option>姑父</option>
+						<option>姑母</option>
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">本地联系人电话</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a14" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">是否有居住证</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a15">
+						<option>-请选择-</option>
+						<option>有</option>
+						<option>无</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">居住证件号码</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a16" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">居住证签发日期</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control datepicker" id="a17" placeholder="必填项">
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">入学时间</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control datepicker" id="a18" placeholder="必填项">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">入学方式</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a19">
+						<option>-请选择-</option>
+						<option>就近入学</option>
+						<option>义务教育阶段其他</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">就读方式</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a20">
+						<option>-请选择-</option>
+						<option>走读</option>
+						<option>住校</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">学区外</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="a21">
+						<option>-请选择-</option>
+						<option>是</option>
+						<option>否</option>
+
+					</select>
+				</div>
+				<label for="lastname" class="col-sm-1 control-label">家庭住址</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="a8" placeholder="必填项">
+				</div>
+			</div>
+
+			</div>
+		</form>
 	</body>
 	<script>
-	 $(".datepicker").datepicker({ format: "yyyy-mm-dd", language: "zh-CN", autoclose: true, todayhightline: true });
-		
-		window.onload=function(){
+		$(".datepicker").datepicker({
+			format: "yyyy-mm-dd",
+			language: "zh-CN",
+			autoclose: true,
+			todayhightline: true
+		});
+
+		window.onload = function() {
 			let url = top.window.location.href;
-        id = url.slice(url.indexOf('?') + 4);
-        if(id>0){ 
-        	top.dier();
-        
-        }else{
-        	top.dier1();
-        	
-        }
-   
-};
-		
+			id = url.slice(url.indexOf('?') + 4);
+			if(id > 0) {
+				top.dier();
+
+			} else {
+				top.dier1();
+
+			}
+
+		};
 	</script>
+
 </html>
